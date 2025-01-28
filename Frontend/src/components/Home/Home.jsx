@@ -1,11 +1,14 @@
 import React from 'react'
+import Producs from '../Products/Producs'
+import SliderNavigation from '../SliderNavigation/SliderNavigation'
 
 
 const Home = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center mt-10'>
         <div className='md:4xl lg:5xl md:w-6xl xl:w-7xl max-w-7xl'>
-        Hello World !
+          <SliderNavigation />
+          <Producs />
         </div>
     </div>
   )

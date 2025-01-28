@@ -10,14 +10,14 @@ const Header = () => {
     <div>
       
       {open && (
-          <div className='flex justify-center bg-primary text-text-primary font-primary leading-0.6 text-sm font-thin  p-3 '>
-          <div className='flex gap-2'>
+          <div className='flex justify-center bg-primary text-text-primary font-primary leading-6 text-sm font-extralight  p-3 '>
+          <div className='flex gap-6'>
           <div className="text">
-          Something new is coming  Stay tuned with us  !
+          Something  new  is  coming  Stay tuned with us  !
           </div>
           <div className="button">
           <button onClick={toggleHeaderbar}>
-        cross
+        <img src="https://cdn-icons-png.flaticon.com/128/1828/1828666.png" alt="cross" className='w-3'  />
       </button>
           </div>
           </div>
