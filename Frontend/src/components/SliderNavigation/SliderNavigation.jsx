@@ -2,7 +2,7 @@ import React from 'react'
 
 const SliderNavigation = () => {
   return (
-    <div>SliderNavigation</div>
+    <div>Banaudai xu</div>
   )
 }
 
