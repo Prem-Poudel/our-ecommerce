@@ -10,7 +10,7 @@ const Header = () => {
     <div>
       
       {open && (
-          <div className='flex justify-center bg-primary text-text-primary font-primary leading-6 text-sm font-extralight  p-3 '>
+          <div className='flex justify-center bg-primary text-text-primary font-font-primary leading-6 text-sm font-extralight  p-3 '>
           <div className='flex gap-6'>
           <div className="text">
           Something  new  is  coming  Stay tuned with us  !

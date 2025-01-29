@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className='border-b flex font-font-primary justify-center items-center'>
+    <div className='border-b border-b-gray-300 flex font-font-primary justify-center items-center'>
         {/* For Laptop responsive */}
         <div className='md:4xl lg:5xl md:w-6xl xl:w-7xl max-w-7xl'>
         <div className='hidden md:flex justify-between align-middle py-5 items-center'>
             {/* logo */}
             <div className='text-xl  font-extrabold'>
-                Manila Tech     
+                <NavLink to="/">Manila Store</NavLink>    
             </div>
             {/* Navlink */}
             <div className='flex gap-14 items-center'>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-                <div><img src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart-image" className='w-7' /></div>
+                <div><NavLink to="/cart"><img src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt="Cart-image" className='w-7' /></NavLink></div>
                 <div><img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="User-image" className='w-7' /></div>
             </div>
         </div>
