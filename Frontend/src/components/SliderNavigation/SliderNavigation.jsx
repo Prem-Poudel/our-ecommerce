@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 
 const SliderNavigation = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

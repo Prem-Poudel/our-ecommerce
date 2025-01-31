@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Productcard from './Productcard';
 
-const Producs = () => {
+const Producs = React.memo(() => {  // ✅ Memoized to prevent re-renders
   const [products, setProducts] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(8); // Initially show 6 products
-
-  const getProducts = async () => {
-    const response = await fetch("http://localhost:3000/products");
-    const data = await response.json();
-    setProducts(data);
-  };
+  const [visibleCount, setVisibleCount] = useState(8);
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    const getProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    if (products.length === 0) {
+      getProducts();
+    }
+  }, [products.length]);
 
   return (
     <div className='mt-[140px]'>
@@ -24,14 +30,14 @@ const Producs = () => {
         </div>
         <div className='text-size-2 font-2'>Explore Our Products</div>
       </div>
-      
+
       <div>
         <div className='flex flex-wrap md:justify-between items-center'>
-          {products.slice(0, visibleCount).map((item, index) => (
-            <Productcard data={item} key={index} />
-          ))}
+          {products.slice(0, visibleCount).map((item) => {
+           return <Productcard data={item} key={item.id} />
+})}
         </div>
-        
+
         {visibleCount < products.length && (
           <div className='text-center mt-[60px] mb-36'>
             <button 
@@ -45,6 +51,6 @@ const Producs = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Producs;

@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 
-const Header = () => {
+const Header = React.memo(() => {
   const [open, setOpen] = useState(true);
   
   const toggleHeaderbar = () => {
     setOpen(!open);
   }
   return (
-    <div>
+    <header>
+       <div>
       
       {open && (
           <div className='flex justify-center bg-primary text-text-primary font-font-primary leading-6 text-sm font-extralight  p-3 '>
@@ -25,7 +27,8 @@ const Header = () => {
         )
       }
     </div>
-  )
-}
+    </header>
+  );
+});
 
-export default Header
+export default Header;
