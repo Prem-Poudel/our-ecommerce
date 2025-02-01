@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: black;
+    --color-secondary: #D22B2B;
+    --color-text-primary: white;
+    --font-primary:"M PLUS Rounded 1c", serif;
+    --text-size-2: 2.25rem; 
+    --text-size-3: 1rem;
+    --font-weight-2: 900;
+    --font-weight-3: 700;  
+}
