@@ -37,7 +37,7 @@ const Productcard = (props) => {
 
       {/* Text */}
       <div className="flex flex-col p-4 gap-2">
-        <div className="font-semibold">{props.data.title}</div>
+        <div className="font-semibold">{props.data.name}</div>
         <div className="text-gray-500"><strike>Rs. {props.data.price}</strike></div>
         <div className="text-red-500">Rs. {props.data.price}</div>
         <div className="text-sm text-gray-400">{props.data.category}</div>

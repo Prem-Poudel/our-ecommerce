@@ -8,8 +8,9 @@ const Producs = React.memo(() => {  // ✅ Memoized to prevent re-renders
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3000/products');
+        const response = await fetch('http://127.0.0.1:8000/api/products/');
         const data = await response.json();
+        console.log(data);
         setProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);
