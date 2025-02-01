@@ -137,3 +137,6 @@ __pycache__/
 # virtualenv
 venv/
 ENV/
+
+# migration files
+migrations/
