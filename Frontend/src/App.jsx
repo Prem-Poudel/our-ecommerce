@@ -1,26 +1,31 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Header from './components/HeaderTop/Header'
-import Home from './components/Home/Home'
-import Navbar from './components/NavBar/Navbar'
-import Footer from './components/Footer/Footer'
-import Cart from './components/Cart/Cart'
-import Login from './components/Accound/Login'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import { Toaster } from 'react-hot-toast'
-
+import React, { useRef } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/HeaderTop/Header';
+import Home from './components/Home/Home';
+import Navbar from './components/NavBar/Navbar';
+import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
+import Login from './components/Account/Login';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
+  const homeRef = useRef(null);
+
+  const scrollToSection = (section) => {
+    if (section === 'home' && homeRef.current) {
+      homeRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <Toaster />
-       <div>
-      <div className=''>
       <Header />
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home ref={homeRef} />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/login' element={<Login />} />
         <Route path='/about' element={<About />} />
@@ -28,9 +33,7 @@ const App = () => {
       </Routes>
       {/* <Footer /> */}
     </div>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

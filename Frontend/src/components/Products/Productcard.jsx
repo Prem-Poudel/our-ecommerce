@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Toaster, toast } from 'react-hot-toast';
-import { data } from "react-router-dom";
+import { data, NavLink } from "react-router-dom";
 
 const Productcard = (props) => {
   const [discount, setDiscount] = useState(0);
@@ -29,11 +29,11 @@ const Productcard = (props) => {
         body: JSON.stringify(props.data),
       });
 
-      if (data) {
-        toast.success("Added to cart successfully");
-      } else {
-        toast.error("Failed to add to cart");
-      }
+      // if (data) {
+      //   toast.success("Added to cart successfully");
+      // } else {
+      //   toast.error("Failed to add to cart");
+      // }
     } catch (error) {
       toast.error("Something went wrong. Please try again.");
       console.error("Error adding to cart:", error);
@@ -76,7 +76,7 @@ const Productcard = (props) => {
           onClick={addToCart}
           className="bg-black text-white p-4 w-full text-center"
         >
-          Add To Cart
+          <div><NavLink className='w-full px-20 py-11' to='/cart'>Add To Car</NavLink></div>
         </button>
       </div>
       <div className="text-sm absolute top-2 right-2 text-red-500">-{discount}%</div>

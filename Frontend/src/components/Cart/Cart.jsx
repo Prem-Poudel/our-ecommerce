@@ -19,15 +19,15 @@ const Cart = () => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-10">
       <div className="md:text-4xl lg:text-5xl md:w-6xl xl:w-7xl max-w-7xl">
         <div>
           {cart.length === 0 ? (
             <div>Please login to see your cart.</div>
           ) : (
-            cart.map((item) => (
-              <CartData key={item.id} fetchCartdata={fetchCartdata} data={item} />
-            ))
+            cart.map((item ,index) => {
+             return <CartData key={index} fetchCartdata={fetchCartdata} data={item} />
+})
           )}
         </div>
       </div>

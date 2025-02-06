@@ -25,7 +25,7 @@ const CartData = (props) => {
 
       <div className="flex flex-col gap-1">
         <div className="text-lg font-semibold">{props.data.title}</div>
-        <div className="text-gray-600">${props.data.price}</div>
+        <div className="text-gray-600">RS. {props.data.price}</div>
         <div className="text-gray-500 text-sm">{props.data.category}</div>
       </div>
 
