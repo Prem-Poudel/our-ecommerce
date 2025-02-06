@@ -26,7 +26,7 @@ class CategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 # product views
 
-class ProductListCreateView(generics.ListCreateAPIView):
+class ProductListCreateAPIView(generics.ListCreateAPIView):
     """
     GET: List all products
     POST: Create a new product
@@ -34,7 +34,7 @@ class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-class ProductRetriveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     """
     GET: Retrieve a product
     PUT: Update a product

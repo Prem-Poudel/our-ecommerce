@@ -14,9 +14,10 @@ class Category(models.Model):
     
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ManyToManyField(Category, related_name='products')
     description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    actual_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
+    increase_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     image = models.ImageField(upload_to='products/', blank=True)
     stock = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -25,7 +26,7 @@ class Product(models.Model):
         return self.name
     
     class Meta:
-        ordering = ['price']
+        ordering = ['stock']
         verbose_name_plural = 'Products'
         verbose_name = 'Product'
 

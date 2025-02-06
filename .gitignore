@@ -145,6 +145,10 @@ migrations/
 pnpm-debug.log*
 lerna-debug.log*
 
+# media files
+media/
+media
+
 node_modules
 dist
 dist-ssr
