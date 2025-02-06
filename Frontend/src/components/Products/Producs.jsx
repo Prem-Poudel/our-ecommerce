@@ -20,7 +20,7 @@ const Producs = React.memo(() => {  // ✅ Memoized to prevent re-renders
     if (products.length === 0) {
       getProducts();
     }
-  }, [products.length]);
+  }, []);
 
   return (
     <div className='mt-[140px]'>

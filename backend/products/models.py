@@ -11,10 +11,20 @@ class Category(models.Model):
     
     class Meta:
         ordering = ['name']
+
+class SubCategory(models.Model):
+    name = models.CharField(max_length=100)
+    
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
     
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    category = models.ManyToManyField(Category, related_name='products')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    sub_category = models.ManyToManyField(SubCategory, related_name='products', blank=True)
     description = models.TextField(blank=True)
     actual_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     increase_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)

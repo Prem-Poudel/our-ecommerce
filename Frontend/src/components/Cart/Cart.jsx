@@ -23,7 +23,7 @@ const Cart = () => {
       <div className="md:text-4xl lg:text-5xl md:w-6xl xl:w-7xl max-w-7xl">
         <div>
           {cart.length === 0 ? (
-            <div>There is no data in the cart</div>
+            <div>Please login to see your cart.</div>
           ) : (
             cart.map((item) => (
               <CartData key={item.id} fetchCartdata={fetchCartdata} data={item} />
