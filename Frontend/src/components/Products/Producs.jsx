@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Productcard from './Productcard';
 
-const Producs = React.memo(() => {  // ✅ Memoized to prevent re-renders
+const Producs = React.memo(() => {
   const [products, setProducts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(8);
 
@@ -27,14 +27,14 @@ const Producs = React.memo(() => {  // ✅ Memoized to prevent re-renders
         <div className='text-size-3 flex gap-3 items-center'>
           <div className='py-6 px-3 bg-red-600 font-3'></div>
           <div>Our Products</div>
-        </div>
+        </div>  
         <div className='text-size-2 font-2'>Explore Our Products</div>
       </div>
 
       <div>
         <div className='flex flex-wrap md:justify-between items-center'>
-          {products.slice(0, visibleCount).map((item) => {
-           return <Productcard data={item} key={item.id} />
+          {products.slice(0, visibleCount).map((item, index) => {
+           return <Productcard data={item} key={index} />
 })}
         </div>
 
