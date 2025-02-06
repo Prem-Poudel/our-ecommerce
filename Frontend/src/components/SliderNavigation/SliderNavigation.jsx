@@ -1,15 +1,8 @@
-import React, { memo, useMemo, useCallback } from 'react';
+import React, { memo, useMemo } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NavLink } from 'react-router-dom';
-
-
-const categories = [
-  "Women's Fashion", "Men's Fashion", "Electronics",
-  "Home & Lifestyle", "Medicine", "Sports & Outdoor",
-  "Baby's Toy", "Groceries & Pets", "Health & Beauty"
-];
 
 const images = [
   "https://img.freepik.com/free-photo/diet-healthy-lifestyle-junk-food-concept-cute-redhead-woman-cant-resist-temptation-bite-tasty-ca_1258-127710.jpg?t=st=1738843911~exp=1738847511~hmac=d4d818c6bedbd5085cf677eb052059b8a22852cd54d8b0d0c0723b3da4ba8f10&w=2000",
@@ -38,25 +31,110 @@ const SliderNavigation = () => {
     ],
   }), []);
 
-  const renderCategoryLinks = useCallback(() => (
-    categories.map((category, index) => (
-      <NavLink key={index} className="flex items-center justify-between">
-        <div>{category}</div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
-          alt="arrow"
-          className="w-3"
-          loading="lazy"
-        />
-      </NavLink>
-    ))
-  ), []);
-
   return (
     <div className="flex gap-10 font-font-primary">
       {/* Navigation */}
       <div className="w-[20%] border-r border-gray-300 pt-10 hidden md:flex flex-col justify-between pr-10">
-        {renderCategoryLinks()}
+        {/* Static Category Links */}
+        <NavLink
+          to="/womenfashion"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Women's Fashion</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/menfashion"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Men's Fashion</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/electronics"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Electronics</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/homeappliences"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Home & Lifestyle</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/medicine"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Medicine</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/sports"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Sports & Outdoor</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/babytoy"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Baby's Toy</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/groceries"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Groceries & Pets</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
+        <NavLink
+          to="/healthadnbeauty"
+          className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
+          <div>Health & Beauty</div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="arrow"
+            className="w-3"
+            loading="lazy"
+          />
+        </NavLink>
       </div>
 
       {/* Slider */}

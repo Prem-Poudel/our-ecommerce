@@ -10,7 +10,7 @@
       "stock": 36,
       "discount": 20,
       "brand": "Samsung",
-      "category": "Milk Product",
+      "category": "Baby's Toy",
       "thumbnail": "https://media.istockphoto.com/id/155373465/photo/assortment-of-most-common-dairy-products-on-white-backdrop.jpg?s=612x612&w=0&k=20&c=GGiWGsfKQDRgQbyCA9wX2oUXazEldw1Gw1dbgReVaH8=",
       "images": [
         "https://cdn.dummyjson.com/product-images/3/1.jpg"
@@ -26,7 +26,7 @@
       "stock": 32,
       "discount": 20,
       "brand": "Huawei",
-      "category": "Milk Product",
+      "category": "Electronics",
       "thumbnail": "https://media.istockphoto.com/id/1127471287/photo/cheese-on-white.jpg?s=612x612&w=0&k=20&c=m8kJAfayGrBoqKceiwGAq7SaEDrbZCyPzklYOm3_MBk=",
       "images": [
         "https://cdn.dummyjson.com/product-images/5/1.jpg",
@@ -44,7 +44,7 @@
       "stock": 83,
       "discount": 20,
       "brand": "Apple",
-      "category": "Animal Product",
+      "category": "Women's Fashion",
       "thumbnail": "https://media.istockphoto.com/id/119669163/photo/protein-foods.jpg?s=612x612&w=0&k=20&c=RKYXgTSaccQM5I3nmkQH6KNm4jxuT0F7F87Il7GWTp4=",
       "images": [
         "https://cdn.dummyjson.com/product-images/6/1.png",
