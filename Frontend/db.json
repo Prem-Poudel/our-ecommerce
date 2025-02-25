@@ -531,5 +531,26 @@
       "thumbnail": "https://img.pixelz.com/blog/photograph-white-products-on-white-backgrounds-ecommerce/BackgroundOnly@2x.webp"
     }
   ],
-  "carts": []
+  "carts": [
+    {
+      "id": "12",
+      "title": "Brown Perfume",
+      "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+      "price": 40,
+      "discountPercentage": 15.66,
+      "rating": 4,
+      "stock": 52,
+      "discount": 20,
+      "brand": "Royal_Mirage",
+      "category": "fragrances",
+      "thumbnail": "https://cgifurniture.com/blog/wp-content/uploads/2018/04/chair_spin360_web600x6000056.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/12/1.jpg",
+        "https://cdn.dummyjson.com/product-images/12/2.jpg",
+        "https://cdn.dummyjson.com/product-images/12/3.png",
+        "https://cdn.dummyjson.com/product-images/12/4.jpg",
+        "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+      ]
+    }
+  ]
 }

@@ -5,12 +5,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import { NavLink } from 'react-router-dom';
 
 const images = [
-  "https://img.freepik.com/free-photo/diet-healthy-lifestyle-junk-food-concept-cute-redhead-woman-cant-resist-temptation-bite-tasty-ca_1258-127710.jpg?t=st=1738843911~exp=1738847511~hmac=d4d818c6bedbd5085cf677eb052059b8a22852cd54d8b0d0c0723b3da4ba8f10&w=2000",
-  "https://img.freepik.com/free-photo/concerned-tensed-attractive-redhead-female-student-cant-write-down-everything-from-blackboard-after_1258-126207.jpg?t=st=1738844049~exp=1738847649~hmac=a2df26e8efe86bf4fc935b4205bf523d22e23fb8c354fc1b66f07485c5c9bc0f&w=2000",
-  "https://img.freepik.com/free-photo/inspired-upbeat-dreamy-fascinated-redhead-girl-writing-down-interesting-lecture-smiling-gazi_1258-126205.jpg?t=st=1738844085~exp=1738847685~hmac=8bcf5f551ce23bb5d1d76fe5eb2f7ef55d2050841af5f3431b9330d2f01dc358&w=2000",
-  "https://img.freepik.com/free-photo/cheerful-cute-redhead-curly-girlfriend-holding-popcorn-chat-with-boyfriend-before-movie-start-cinema-smiling-joyfully-like-attend-premieres-theatres-standing-overjoy-orange-background_1258-310025.jpg?t=st=1738844118~exp=1738847718~hmac=3cc120e00caad3cc0caff718b67951a6d149a8cd977897d83eac1de21ebab0e1&w=2000",
-  "https://img.freepik.com/free-photo/choices-shopping-winter-holidays-concept-cute-smiling-redhead-girl-with-curly-red-hair-yellow_1258-309848.jpg?t=st=1738844146~exp=1738847746~hmac=c1e13b2225ea447405ae51a8dcc9a9652622b5a244c6b252c9cbfef49ba18973&w=2000",
-  "https://img.freepik.com/free-photo/tender-romantic-dreamy-redhead-woman-winter-hat-sweater-embrace-big-cute-red-heart-sign-as-sy_1258-143225.jpg?t=st=1738844172~exp=1738847772~hmac=8d5f027efb2d59b90e99d91054681e3568ca04f574c7f5ec0d2f24be3a45e8f4&w=2000"
+  "https://img.freepik.com/free-photo/diet-healthy-lifestyle-junk-food-concept-cute-redhead-woman-cant-resist-temptation-bite-tasty-ca_1258-127710.jpg?t=st=1740385416~exp=1740389016~hmac=9c891f58c5ebfd4dd88251f14b72333d7aa52957d322016b87358fe45e2b6c8e&w=2000",
+  "https://img.freepik.com/free-photo/wow-amazing-astonished-surprised-redhead-girl-checkingout-holiday-special-promo-woman-stare_1258-143212.jpg?t=st=1740385475~exp=1740389075~hmac=6c72f41e1e8004aaa818567fba85e330f604eaeb8f584848a19b9a69c4310a02&w=2000",
+  "https://img.freepik.com/free-photo/excited-cheerful-redhead-pretty-female-student-got-enrolled-exchange-program-learn-news-via-online-application-checked-mail-using-smartphone-clench-fist-yes-celebration-excitement_1258-309914.jpg?t=st=1740385509~exp=1740389109~hmac=f22f1c370731c863aef3ddb332c1036855f36044d94c2bb6a3be9d9db5fdca8e&w=2000",
+  "https://img.freepik.com/free-photo/excitement-emotions-holidays-concept-waistup-shot-cheerful-impressed-excited-redhead-woman-s_1258-127728.jpg?t=st=1740385543~exp=1740389143~hmac=07b6d34346379fa526bba7b94fdf58a6a2d7587144d05fea8f1c5de940fd6387&w=2000",
+  "https://img.freepik.com/free-photo/cheerful-cute-redhead-curly-girlfriend-holding-popcorn-chat-with-boyfriend-before-movie-start-cinema-smiling-joyfully-like-attend-premieres-theatres-standing-overjoy-orange-background_1258-310025.jpg?t=st=1740385630~exp=1740389230~hmac=d73243b55294f4b293aa71902eb588511d3a0776699498d0632b491eff881d6c&w=2000",
+  "https://img.freepik.com/free-photo/tender-romantic-dreamy-redhead-woman-winter-hat-sweater-embrace-big-cute-red-heart-sign-as-sy_1258-143225.jpg?t=st=1740385671~exp=1740389271~hmac=c8402468d2fc2d830a249b0426773dad1200435dab68f2694d717e8a901e392c&w=2000"
 ];
 
 const SliderNavigation = () => {

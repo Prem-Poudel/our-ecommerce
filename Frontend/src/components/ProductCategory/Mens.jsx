@@ -11,7 +11,6 @@ const Mens = () => {
       try {
         const response = await fetch('http://localhost:3000/products');
         const data = await response.json();
-        // Filter products to only include those with category "Electronics" (case-insensitive)
         const electronicsProducts = data.filter(product => 
           product.category.toLowerCase() === "Men's fashion".toLowerCase()
         );

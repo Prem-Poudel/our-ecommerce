@@ -84,7 +84,7 @@ const Login = () => {
               <input
                 type="email"
                 required
-                className="border border-gray-300 p-2.5 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-400"
+                className="border border-gray-300 p-2.5 rounded-xl w-full focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-400 shadow-md"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +94,7 @@ const Login = () => {
               <input
                 type="password"
                 required
-                className="border border-gray-300 p-2.5 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-400"
+                className="border border-gray-300 p-2.5 rounded-xl w-full focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-400 shadow-md"
                 placeholder="**********"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -120,7 +120,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full py-2.5 text-white bg-red-600 hover:bg-red-800 transition duration-200 rounded-lg text-sm font-bold"
+              className="w-full py-2.5 text-white  bg-red-600 hover:bg-red-800 transition duration-200 rounded-lg text-sm font-bold"
             >
               Sign in
             </button>

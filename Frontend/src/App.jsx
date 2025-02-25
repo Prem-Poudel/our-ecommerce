@@ -19,7 +19,7 @@ import SportsOutdoor from './components/ProductCategory/SportsOutdoor';
 import Grocery from './components/ProductCategory/Grocery';
 import HealthBeauty from './components/ProductCategory/HealthBeauty';
 
-const App = () => {
+const App = () => { 
   const homeRef = useRef(null);
 
   const scrollToSection = (section) => {
@@ -49,7 +49,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

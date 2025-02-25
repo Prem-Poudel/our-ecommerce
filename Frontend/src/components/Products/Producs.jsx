@@ -22,7 +22,7 @@ const Producs = React.memo(() => {
   }, [products.length]);
 
   return (
-    <div className='mt-[140px]'>
+    <div className='mt-36 mb-36'>
       <div className='flex flex-col gap-3'>
         <div className='text-size-3 flex gap-3 items-center'>
           <div className='py-6 px-3 bg-red-600 font-3'></div>
@@ -39,7 +39,7 @@ const Producs = React.memo(() => {
         </div>
 
         {visibleCount < products.length && (
-          <div className='text-center mt-[60px] mb-36'>
+          <div className='text-center mt-[60px]'>
             <button 
               className='px-10 py-4 bg-secondary text-white rounded hover:bg-red-700 transition' 
               onClick={() => setVisibleCount(products.length)}
