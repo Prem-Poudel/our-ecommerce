@@ -59,7 +59,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-20 px-4 sm:px-8">
+    <div className="flex justify-center items-center mt-20 px-4 sm:px-8 pb-36">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 bg-white overflow-hidden">
         
         {/* Left Side: Image (Hidden on Small Screens) */}

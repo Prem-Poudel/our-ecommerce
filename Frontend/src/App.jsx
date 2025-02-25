@@ -19,36 +19,36 @@ import SportsOutdoor from './components/ProductCategory/SportsOutdoor';
 import Grocery from './components/ProductCategory/Grocery';
 import HealthBeauty from './components/ProductCategory/HealthBeauty';
 
-const App = () => { 
+const App = () => {
   const homeRef = useRef(null);
 
-  const scrollToSection = (section) => {
-    if (section === 'home' && homeRef.current) {
-      homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Toaster />
       <Header />
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home ref={homeRef} />} />
-        <Route path='/Menfashion' element={<Mens />} />
-        <Route path='/womenfashion' element={<Womens />} />
-        <Route path='/babytoy' element={<BabyToy />} />
-        <Route path='/Electronics' element={<Electronics />} />
-        <Route path='/homeappliences' element={<HomeLifestyle />} />
-        <Route path='/medicine' element={<Medicine />} />
-        <Route path='/sports' element={<SportsOutdoor />} />
-        <Route path='/groceries' element={<Grocery />} />
-        <Route path='/healthadnbeauty' element={<HealthBeauty />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+      
+      {/* Main content area that pushes footer down */}
+      <div className="flex-grow">
+        <Routes>
+          <Route path='/' element={<Home ref={homeRef} />} />
+          <Route path='/menfashion' element={<Mens />} />
+          <Route path='/womenfashion' element={<Womens />} />
+          <Route path='/babytoy' element={<BabyToy />} />
+          <Route path='/electronics' element={<Electronics />} />
+          <Route path='/homeappliances' element={<HomeLifestyle />} />
+          <Route path='/medicine' element={<Medicine />} />
+          <Route path='/sports' element={<SportsOutdoor />} />
+          <Route path='/groceries' element={<Grocery />} />
+          <Route path='/healthandbeauty' element={<HealthBeauty />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </div>
+
+      {/* Footer stays at bottom */}
       <Footer />
     </div>
   );

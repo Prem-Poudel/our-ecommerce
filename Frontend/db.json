@@ -528,29 +528,49 @@
       "title": "iPhone 15",
       "category": "smartphones",
       "price": 899,
-      "thumbnail": "https://img.pixelz.com/blog/photograph-white-products-on-white-backgrounds-ecommerce/BackgroundOnly@2x.webp"
+      "thumbnail": "https://img.pixelz.com/blog/photograph-white-products-on-white-backgrounds-ecommerce/BackgroundOnly@2x.webp",
+      "quantity": "1"
     }
   ],
   "carts": [
     {
-      "id": "12",
-      "title": "Brown Perfume",
-      "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-      "price": 40,
-      "discountPercentage": 15.66,
-      "rating": 4,
-      "stock": 52,
+      "id": "5",
+      "title": "Cheese",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": "290",
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
       "discount": 20,
-      "brand": "Royal_Mirage",
-      "category": "fragrances",
-      "thumbnail": "https://cgifurniture.com/blog/wp-content/uploads/2018/04/chair_spin360_web600x6000056.jpg",
+      "brand": "Huawei",
+      "category": "Electronics",
+      "thumbnail": "https://media.istockphoto.com/id/1127471287/photo/cheese-on-white.jpg?s=612x612&w=0&k=20&c=m8kJAfayGrBoqKceiwGAq7SaEDrbZCyPzklYOm3_MBk=",
       "images": [
-        "https://cdn.dummyjson.com/product-images/12/1.jpg",
-        "https://cdn.dummyjson.com/product-images/12/2.jpg",
-        "https://cdn.dummyjson.com/product-images/12/3.png",
-        "https://cdn.dummyjson.com/product-images/12/4.jpg",
-        "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
-      ]
+        "https://cdn.dummyjson.com/product-images/5/1.jpg",
+        "https://cdn.dummyjson.com/product-images/5/2.jpg",
+        "https://cdn.dummyjson.com/product-images/5/3.jpg"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "title": "Meat",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": "580",
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "discount": 20,
+      "brand": "Apple",
+      "category": "Women's Fashion",
+      "thumbnail": "https://media.istockphoto.com/id/119669163/photo/protein-foods.jpg?s=612x612&w=0&k=20&c=RKYXgTSaccQM5I3nmkQH6KNm4jxuT0F7F87Il7GWTp4=",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/6/1.png",
+        "https://cdn.dummyjson.com/product-images/6/2.jpg",
+        "https://cdn.dummyjson.com/product-images/6/3.png",
+        "https://cdn.dummyjson.com/product-images/6/4.jpg"
+      ],
+      "quantity": 1
     }
   ]
 }

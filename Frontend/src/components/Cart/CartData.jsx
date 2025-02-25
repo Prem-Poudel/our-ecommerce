@@ -1,6 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CartData = (props) => {
+  const [quantity, setQuantity] = useState(props.data.quantity || 1);
+
+  const updateQuantity = async (newQuantity) => {
+    if (newQuantity < 1) return;
+
+    const updatedData = {
+      ...props.data, 
+      quantity: newQuantity, 
+    };
+
+    try {
+      const response = await fetch(`http://localhost:3000/carts/${props.data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      });
+
+      if (response.ok) {
+        setQuantity(newQuantity);
+        props.fetchCartdata(); 
+      } else {
+        console.error("Failed to update quantity");
+      }
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  };
+
   const removeFromCart = async () => {
     try {
       const response = await fetch(`http://localhost:3000/carts/${props.data.id}`, {
@@ -8,7 +38,7 @@ const CartData = (props) => {
       });
 
       if (response.ok) {
-        props.fetchCartdata(); // Refresh the cart after successful deletion
+        props.fetchCartdata(); 
       } else {
         console.error("Failed to remove item from cart");
       }
@@ -18,24 +48,31 @@ const CartData = (props) => {
   };
 
   return (
-    <div className="flex items-center justify-between border-b py-4">
+    <div className="flex items-center justify-between border-1 border-gray-200 px-5 py-4 shadow-sm mt-3">
       <div>
-        <img src={props.data.thumbnail} alt="Product" className="w-[100px] h-[100px] object-cover" />
+        <img src={props.data.thumbnail} alt="Product" className="w-[50px] h-[50px] object-cover" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <div className="text-lg font-semibold">{props.data.title}</div>
-        <div className="text-gray-600">RS. {props.data.price}</div>
-        <div className="text-gray-500 text-sm">{props.data.category}</div>
+      {/* Price */}
+      <div className="text-sm">
+        ${props.data.price}
       </div>
 
-      <div>
-        <button
-          onClick={removeFromCart}
-          className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md"
-        >
-          Remove
-        </button>
+      {/* Quantity Control */}
+      <div className='flex items-center gap-2'>
+        <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => updateQuantity(quantity - 1)}>-</button>
+        <span className='text-sm'>{quantity}</span>
+        <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => updateQuantity(quantity + 1)}>+</button>
+      </div>
+
+      {/* Subtotal */}
+      <div className='text-sm'>
+        ${props.data.price * quantity}
+      </div>
+
+      {/* Remove Button */}
+      <div className='text-sm'>
+        <button className="text-red-500" onClick={removeFromCart}>Remove</button>
       </div>
     </div>
   );
