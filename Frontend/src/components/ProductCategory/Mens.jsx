@@ -24,7 +24,7 @@ const Mens = () => {
   }, []);
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center pb-36'>
       <div className='md:w-6xl xl:w-7xl max-w-7xl'>
         <SliderNavigation />
         <div className='flex flex-col gap-3 mt-28'>

@@ -70,7 +70,7 @@ const SliderNavigation = () => {
           />
         </NavLink>
         <NavLink
-          to="/homeappliences"
+          to="/homeappliances"
           className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
           <div>Home & Lifestyle</div>
           <img
@@ -125,7 +125,7 @@ const SliderNavigation = () => {
           />
         </NavLink>
         <NavLink
-          to="/healthadnbeauty"
+          to="/healthandbeauty"
           className="flex items-center justify-between p-2 text-left w-full transition duration-200 hover:bg-gray-200">
           <div>Health & Beauty</div>
           <img
