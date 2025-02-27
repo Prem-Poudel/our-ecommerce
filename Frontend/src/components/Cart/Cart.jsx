@@ -3,27 +3,24 @@ import CartData from './CartData';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const [loading, setLoading] = useState(true);  // To manage the loading state
+  const [loading, setLoading] = useState(true); 
 
-  // Fetch cart data from the API
   const fetchCartdata = async () => {
     try {
       const response = await fetch('http://localhost:3000/carts');
       const data = await response.json();
       setCart(data);
-      setLoading(false); // Set loading to false once data is fetched
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching cart data:", error);
-      setLoading(false); // Set loading to false even if there's an error
+      setLoading(false);
     }
   };
 
-  // Use useEffect to fetch data when the component is mounted
   useEffect(() => {
     fetchCartdata();
   }, []);
 
-  // Calculate the subtotal price for all items in the cart
   const calculateSubtotal = () => {
     return cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   };
@@ -32,15 +29,13 @@ const Cart = () => {
     const updatedCart = cart.map(item => 
       item.id === id ? { ...item, quantity: newQuantity } : item
     );
-    setCart(updatedCart); // Update cart after quantity change
+    setCart(updatedCart);
   };
 
-  // Calculate the subtotal, shipping, and total
   const subtotal = calculateSubtotal();
-  const shipping = 0; // Assuming shipping is free
-  const total = subtotal + shipping; // Add shipping or other charges if needed
+  const shipping = 0;
+  const total = subtotal + shipping; 
 
-  // If loading, display loading message
   if (loading) {
     return <div className="flex justify-center pt-20">Loading cart...</div>;
   }
@@ -122,7 +117,7 @@ const Cart = () => {
               <div className="button flex justify-center">
                 <button className='px-20 py-4 bg-secondary text-white rounded hover:bg-red-700 transition'>
                   Process to checkout
-                </button> 
+                </button>
               </div>
             </div>
           </div>

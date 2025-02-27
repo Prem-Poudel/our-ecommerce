@@ -22,7 +22,7 @@ const CartData = (props) => {
 
       if (response.ok) {
         setQuantity(newQuantity);
-        props.fetchCartdata(); 
+        props.fetchCartdata();
       } else {
         console.error("Failed to update quantity");
       }
@@ -38,7 +38,7 @@ const CartData = (props) => {
       });
 
       if (response.ok) {
-        props.fetchCartdata(); 
+        props.fetchCartdata();
       } else {
         console.error("Failed to remove item from cart");
       }
@@ -60,9 +60,9 @@ const CartData = (props) => {
 
       {/* Quantity Control */}
       <div className='flex items-center gap-2'>
-        <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => updateQuantity(quantity - 1)}>-</button>
-        <span className='text-sm'>{quantity}</span>
-        <button className="px-2 py-1 bg-gray-200 rounded" onClick={() => updateQuantity(quantity + 1)}>+</button>
+        <button className="text-xl bg-gray-200 px-5" onClick={() => updateQuantity(quantity - 1)}>-</button>
+        <span className='text-lg'>{quantity}</span>
+        <button className="text-xl bg-gray-200 px-5" onClick={() => updateQuantity(quantity + 1)}>+</button>
       </div>
 
       {/* Subtotal */}

@@ -18,6 +18,7 @@ import Medicine from './components/ProductCategory/Medicine';
 import SportsOutdoor from './components/ProductCategory/SportsOutdoor';
 import Grocery from './components/ProductCategory/Grocery';
 import HealthBeauty from './components/ProductCategory/HealthBeauty';
+import SignUp from './components/Signup/SignUp';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -28,7 +29,6 @@ const App = () => {
       <Header />
       <Navbar />
       
-      {/* Main content area that pushes footer down */}
       <div className="flex-grow">
         <Routes>
           <Route path='/' element={<Home ref={homeRef} />} />
@@ -43,12 +43,12 @@ const App = () => {
           <Route path='/healthandbeauty' element={<HealthBeauty />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
 
-      {/* Footer stays at bottom */}
       <Footer />
     </div>
   );
