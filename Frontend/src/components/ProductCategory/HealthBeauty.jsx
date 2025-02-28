@@ -7,6 +7,20 @@ const HealthBeauty = () => {
   const [visibleCount, setVisibleCount] = useState(8);
 
   useEffect(() => {
+    // SEO-Friendly Title & Meta Description
+    document.title = "Buy Health & Beauty Products Online - Best Skincare, Makeup & Wellness Deals";
+
+    let metaDescription = document.querySelector("meta[name='description']");
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute(
+      "content",
+      "Shop premium skincare, makeup, haircare, and wellness products online. Get the best deals on beauty essentials, health supplements, and self-care items."
+    );
+
     const getProducts = async () => {
       try {
         const response = await fetch('http://localhost:3000/products');
@@ -17,6 +31,25 @@ const HealthBeauty = () => {
           product.category.toLowerCase() === "health & beauty"
         );
         setProducts(filteredProducts);
+
+        // Adding Structured Data (JSON-LD for SEO)
+        const jsonLd = {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Health & Beauty Products",
+          "description": "Find high-quality beauty and health products online, including skincare, makeup, and wellness essentials.",
+          "itemListElement": filteredProducts.map((product, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": product.name,
+            "url": `https://yourwebsite.com/products/${product.id}`
+          }))
+        };
+
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.textContent = JSON.stringify(jsonLd);
+        document.head.appendChild(script);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -30,17 +63,30 @@ const HealthBeauty = () => {
       <div className="max-w-7xl w-full px-4">
         <SliderNavigation />
 
-        <div className="flex flex-col gap-3 mt-28">
-          <div className="flex gap-3 items-center">
-            <div className="py-6 px-3 bg-red-600"></div>
-            <div className="text-lg font-semibold">Our Products</div>
+        {/* Breadcrumb Navigation for SEO */}
+        <nav aria-label="breadcrumb">
+          <ol className="flex text-gray-500 text-sm mt-4">
+            <li className="mr-2">
+              <a href="/" className="hover:underline">Home</a> /
+            </li>
+            <li>Health & Beauty</li>
+          </ol>
+        </nav>
+
+        {/* SEO-Optimized Headings */}
+        <section className="flex flex-col gap-3 mt-28">
+        <div className='text-size-3 flex gap-3 items-center'>
+            <div className='py-6 px-3 bg-red-600 font-3'></div>
+            <div>Our Products</div>
           </div>
-          <div className="text-xl font-bold">Health & Beauty Products</div>
-        </div>
+          <h1 className="text-size-2 font-2">Shop Health & Beauty Products Online</h1>
+        </section>
 
         <div>
           {products.length === 0 ? (
-            <div className="text-center mt-6 mb-36 text-xl">No products available.</div>
+            <div className="text-center mt-6 mb-36 text-xl text-gray-500">
+              No products available.
+            </div>
           ) : (
             <>
               <div className="flex flex-wrap md:justify-between items-center gap-4">

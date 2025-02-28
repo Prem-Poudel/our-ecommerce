@@ -64,7 +64,7 @@ const BabyToy = () => {
         <SliderNavigation />
 
         {/* Breadcrumb Navigation for SEO */}
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" className='w[100px]'>
           <ol className="flex text-gray-500 text-sm mt-4">
             <li className="mr-2">
               <a href="/" className="hover:underline">Home</a> /
@@ -75,7 +75,7 @@ const BabyToy = () => {
 
         {/* SEO-Optimized Headings */}
         <section className="flex flex-col gap-3 mt-28">
-        <div className='text-size-3 flex gap-3 items-center'>
+           <div className='text-size-3 flex gap-3 items-center'>
             <div className='py-6 px-3 bg-red-600 font-3'></div>
             <div>Our Products</div>
           </div>
