@@ -22,7 +22,7 @@ const Producs = React.memo(() => {
   }, [products.length]);
 
   return (
-    <div className='mt-36 mb-36'>
+    <div className='mt-20 mb-36'>
       <div className='flex flex-col gap-3'>
         <div className='text-size-3 flex gap-3 items-center'>
           <div className='py-6 px-3 bg-red-600 font-3'></div>

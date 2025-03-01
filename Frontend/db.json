@@ -532,45 +532,32 @@
       "quantity": "1"
     }
   ],
-  "carts": [
+  "carts": [],
+
+  "images": [
     {
-      "id": "5",
-      "title": "Cheese",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": "290",
-      "discountPercentage": 10.58,
-      "rating": 4.09,
-      "stock": 32,
-      "discount": 20,
-      "brand": "Huawei",
-      "category": "Electronics",
-      "thumbnail": "https://media.istockphoto.com/id/1127471287/photo/cheese-on-white.jpg?s=612x612&w=0&k=20&c=m8kJAfayGrBoqKceiwGAq7SaEDrbZCyPzklYOm3_MBk=",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/5/1.jpg",
-        "https://cdn.dummyjson.com/product-images/5/2.jpg",
-        "https://cdn.dummyjson.com/product-images/5/3.jpg"
-      ],
-      "quantity": 1
+      "src": "https://img.freepik.com/free-photo/diet-healthy-lifestyle-junk-food-concept-cute-redhead-woman-cant-resist-temptation-bite-tasty-ca_1258-127710.jpg?t=st=1740385416~exp=1740389016~hmac=9c891f58c5ebfd4dd88251f14b72333d7aa52957d322016b87358fe45e2b6c8e&w=2000",
+      "alt": "Redhead woman biting into tasty food, diet vs temptation concept"
     },
     {
-      "id": "6",
-      "title": "Meat",
-      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-      "price": "580",
-      "discountPercentage": 11.02,
-      "rating": 4.57,
-      "stock": 83,
-      "discount": 20,
-      "brand": "Apple",
-      "category": "Women's Fashion",
-      "thumbnail": "https://media.istockphoto.com/id/119669163/photo/protein-foods.jpg?s=612x612&w=0&k=20&c=RKYXgTSaccQM5I3nmkQH6KNm4jxuT0F7F87Il7GWTp4=",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/6/1.png",
-        "https://cdn.dummyjson.com/product-images/6/2.jpg",
-        "https://cdn.dummyjson.com/product-images/6/3.png",
-        "https://cdn.dummyjson.com/product-images/6/4.jpg"
-      ],
-      "quantity": 1
+      "src": "https://img.freepik.com/free-photo/wow-amazing-astonished-surprised-redhead-girl-checkingout-holiday-special-promo-woman-stare_1258-143212.jpg?t=st=1740385475~exp=1740389075~hmac=6c72f41e1e8004aaa818567fba85e330f604eaeb8f584848a19b9a69c4310a02&w=2000",
+      "alt": "Astonished redhead woman surprised by holiday promotion"
+    },
+    {
+      "src": "https://img.freepik.com/free-photo/excited-cheerful-redhead-pretty-female-student-got-enrolled-exchange-program-learn-news-via-online-application-checked-mail-using-smartphone-clench-fist-yes-celebration-excitement_1258-309914.jpg?t=st=1740385509~exp=1740389109~hmac=f22f1c370731c863aef3ddb332c1036855f36044d94c2bb6a3be9d9db5fdca8e&w=2000",
+      "alt": "Excited female student celebrating news of exchange program acceptance"
+    },
+    {
+      "src": "https://img.freepik.com/free-photo/excitement-emotions-holidays-concept-waistup-shot-cheerful-impressed-excited-redhead-woman-s_1258-127728.jpg?t=st=1740385543~exp=1740389143~hmac=07b6d34346379fa526bba7b94fdf58a6a2d7587144d05fea8f1c5de940fd6387&w=2000",
+      "alt": "Excited redhead woman celebrating holidays with bright emotions"
+    },
+    {
+      "src": "https://img.freepik.com/free-photo/cheerful-cute-redhead-curly-girlfriend-holding-popcorn-chat-with-boyfriend-before-movie-start-cinema-smiling-joyfully-like-attend-premieres-theatres-standing-overjoy-orange-background_1258-310025.jpg?t=st=1740385630~exp=1740389230~hmac=d73243b55294f4b293aa71902eb588511d3a0776699498d0632b491eff881d6c&w=2000",
+      "alt": "Cheerful woman holding popcorn chatting with boyfriend at the cinema"
+    },
+    {
+      "src": "https://img.freepik.com/free-photo/tender-romantic-dreamy-redhead-woman-winter-hat-sweater-embrace-big-cute-red-heart-sign-as-sy_1258-143225.jpg?t=st=1740385671~exp=1740389271~hmac=c8402468d2fc2d830a249b0426773dad1200435dab68f2694d717e8a901e392c&w=2000",
+      "alt": "Romantic woman in winter sweater holding a heart-shaped red sign"
     }
   ]
 }
