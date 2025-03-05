@@ -3,17 +3,17 @@ import { NavLink } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem("savedEmail");
+    const savedUsername = localStorage.getItem("savedUsername");
     const savedPassword = localStorage.getItem("savedPassword");
     const savedRememberMe = localStorage.getItem("rememberMe") === "true";
 
-    if (savedRememberMe && savedEmail && savedPassword) {
-      setEmail(savedEmail);
+    if (savedRememberMe && savedUsername && savedPassword) {
+      setUsername(savedUsername);
       setPassword(savedPassword);
       setRememberMe(true);
     }
@@ -23,33 +23,34 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/api/users/login", {
+      const response = await fetch('http://127.0.0.1:8000/api/accounts/login/', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
         credentials: "include",
       });
 
       const data = await response.json();
-
+      console.log(data);
+      console.log("Response status:", response.status); // Debugging
       if (!response.ok) {
         toast.error(data.message || "Login failed. Please try again.");
         return;
       }
 
       if (rememberMe) {
-        localStorage.setItem("savedEmail", email);
+        localStorage.setItem("savedUsername", username);
         localStorage.setItem("savedPassword", password);
         localStorage.setItem("rememberMe", "true");
       } else {
-        localStorage.removeItem("savedEmail");
+        localStorage.removeItem("savedUsername");
         localStorage.removeItem("savedPassword");
         localStorage.removeItem("rememberMe");
       }
 
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("token", data.token.access);
       toast.success("Login successful!");
       window.location.href = "/";
     } catch (error) {
@@ -80,14 +81,14 @@ const Login = () => {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-4">
               
-              <label className="text-sm font-semibold">Email</label>
+              <label className="text-sm font-semibold">Username</label>
               <input
-                type="email"
+                type="text"
                 required
                 className="border border-gray-300 p-2.5 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-400"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
 
               <label className="text-sm font-semibold">Password</label>
